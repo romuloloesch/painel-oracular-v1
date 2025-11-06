@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap principal
+Sitemap: https://loescheoraculo.com/sitemap.xml
+
+# Bloqueia pastas técnicas
+Disallow: /api/
+Disallow: /_next/
+Disallow: /assets/
+Disallow: /static/
+
+# Evita indexação duplicada (parâmetros UTM, etc)
+Disallow: /*?*
+Disallow: /*&*
+
+# Ignora parâmetros de rastreamento comuns
+Clean-param:utm_source&utm_medium&utm_campaign&utm_term&utm_content
