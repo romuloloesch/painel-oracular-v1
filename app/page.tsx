@@ -32,7 +32,26 @@ export default function Page() {
           </p>
           <div className="mt-10">
             <a href="#contato" className="inline-flex items-center gap-2 rounded-2xl px-6 py-3 text-sm sm:text-base bg-[#C7A76B] text-white shadow-sm hover:shadow transition-shadow">
-              Descubra seu Sistema de Clareza
+              <button
+  <div className="mt-10">
+  <button
+    onClick={() => {
+      // Envia evento para o Google Analytics
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'click_sistema_clareza', {
+          event_category: 'Interação',
+          event_label: 'Botão Descubra seu Sistema de Clareza',
+          value: 1,
+        });
+      }
+    }}
+    className="inline-flex items-center gap-2 rounded-2xl px-6 py-3 text-sm sm:text-base bg-[#C7A768] text-white shadow-sm hover:shadow transition-shadow"
+  >
+    Descubra seu Sistema de Clareza
+  </button>
+</div>
+
+
             </a>
           </div>
         </div>
